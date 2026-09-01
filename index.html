@@ -58,10 +58,19 @@ height: 80px;
             cooperativos e clássicos de terror, como Amnesia, antes de se tornar um dos
             maiores streamers da Twitch no Brasil.
         </p>
+        <button>❤️<span>0</span></button>
     </main>
 
     
         <p>Escrito por: Luiz Otávio</p>
     
-</body>
+</body> 
+    <script>
+        const botao = document.querySelector("button");
+botao.addEventListener("click", botaoClicado);
+        function botaoClicado() {
+let texto = botao.querySelector("span");
+texto.textContent++;
+}
+    </script>
 </html>
