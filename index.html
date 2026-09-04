@@ -1,5 +1,5 @@
 
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -7,11 +7,11 @@
     <title>NextStage</title>
 
     <style>
-        img{
-width: 80px;
-height: 80px;
+        img {
+            width: 80px;
+            height: 80px;
+        }
 
-         }
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
@@ -32,23 +32,22 @@ height: 80px;
         p {
             text-align: justify;
         }
-        
     </style>
 </head>
 
 <body>
 
     <header>
-        <h1>NextStage</h1>
+        <h1>Alanzoka</h1>
     </header>
 
     <main>
         <img src="image.png" alt="Alanzoka">
         <p>
             Alanzoka era conhecido pelo apelido NextStage e ficou famoso por sua
-            incrível jogabilidade no CS:GO.
+            incrivel jogabilidade no CS:GO.
         </p>
- 
+
         <h2>Sua trajetória</h2>
 
         <p>
@@ -58,30 +57,31 @@ height: 80px;
             cooperativos e clássicos de terror, como Amnesia, antes de se tornar um dos
             maiores streamers da Twitch no Brasil.
         </p>
-        <button>❤️<span>0</span></button>
-        <button>👍<span>0</span></button>
+
+        <button>❤️ <span>0</span></button>
+        <button>👍 <span>0</span></button>
+
+        <p>Escrito por: Luiz Otávio</p>
     </main>
 
-    
-        <p>Escrito por: Luiz Otávio</p>
-    
-</body> 
     <script>
-       const botoes = document.querySelectorAll("button");
-botoes.forEach(function(botao) {
-botao.addEventListener("click", botaoClicado);
+        const botoes = document.querySelectorAll("button");
 
-function botaoClicado() {
-console.log("fui clicado");
-let texto = botao.querySelector("span");
+        botoes.forEach(function(botao) {
+            let curtiu = false;
 
-if (curtiu === false) {
-texto.textContent++;
-curtiu = true;
-} else {
-texto.textContent--;
-curtiu = false;
-}
-}
+            botao.addEventListener("click", function() {
+                let texto = botao.querySelector("span");
+
+                if (!curtiu) {
+                    texto.textContent = Number(texto.textContent) + 1;
+                    curtiu = true;
+                } else {
+                    texto.textContent = Number(texto.textContent) - 1;
+                    curtiu = false;
+                }
+            });
+        });
     </script>
-</html>
+</body>
+</html
