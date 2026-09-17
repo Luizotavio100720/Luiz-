@@ -60,23 +60,24 @@
     </main>
 
     <script>
-        const botoes = document.querySelectorAll("button");
+      const botoes = document.querySelectorAll("button");
 
-        botoes.forEach(function(botao) {
-            let curtiu = false;
+botoes.forEach((botao) => {
+  let curtiu = false;
 
-          function botaoClicado() {
-console.log("fui clicado");
-let texto = botao.querySelector("span");
+  botao.addEventListener("click", () => {
+    const texto = botao.querySelector("span");
+    let contador = Number(texto.textContent);
 
-if (curtiu === false) {
-texto.textContent++;
-curtiu = true;
-} else {
-texto.textContent--;
-curtiu = false;
-}
-}
+    if (!curtiu) {
+      texto.textContent = contador + 1;
+      curtiu = true;
+    } else {
+      texto.textContent = contador - 1;
+      curtiu = false;
+    }
+  });
+});
 </script>
 </body>
 </html
